@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-class Solution {
+public class ValidParentheses {
     public boolean isValid(String s) {
 
 
@@ -41,5 +41,9 @@ class Solution {
 
         return stack.isEmpty();
         
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Hello World");
     }
 }
