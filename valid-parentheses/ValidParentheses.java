@@ -1,7 +1,9 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public boolean isValid(String s) {
+    public static boolean isValid(String s) {
         // Create a new stack to store the characters.
         Stack<Character> stack = new Stack<>();
 
@@ -40,7 +42,25 @@ public class ValidParentheses {
         
     }
 
+    public static boolean isAnswerValid(boolean result, boolean expectedResult) {
+        if (result == expectedResult)
+            return true;
+        return false;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        Map<String, Boolean> results = new HashMap<String, Boolean>();
+        results.put("()", true);
+        results.put("(){}[]", true);
+        results.put("((", false);
+
+        for(Map.Entry<String, Boolean> item : results.entrySet()) {
+            System.out.println("----------------------------------");
+            System.out.println("Your code is: " + isAnswerValid(isValid(item.getKey()), item.getValue()));
+            System.out.println("Input is: " + item.getKey());
+            System.out.println("isValid result: " + isValid(item.getKey()));
+            System.out.println("Expected value: " + item.getValue());
+            System.out.println("----------------------------------");
+        }
     }
 }
