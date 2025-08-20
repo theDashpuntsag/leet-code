@@ -1,10 +1,31 @@
-# Leet_code
+# LeetCode Solutions Repository
 
-leet code problem solving with multiple languages
+A comprehensive collection of LeetCode problem solutions implemented in multiple programming languages (Java and JavaScript), featuring detailed documentation and explanations.
+
+## 📚 Problems Solved
+
+### Java Solutions
+
+| Problem # | Problem Name | Difficulty | Topics | Time Complexity | Space Complexity |
+|-----------|--------------|------------|--------|-----------------|------------------|
+| [1](javascript/two-sum/) | Two Sum | Easy | Array, Hash Table | O(n²) / O(n) | O(1) / O(n) |
+| [20](java/20.valid-parentheses/) | Valid Parentheses | Easy | String, Stack | O(n) | O(n) |
+| [21](java/21.merge-two-sorted-lists/) | Merge Two Sorted Lists | Easy | Linked List, Recursion | O(m+n) | O(1) |
+| [94](java/94.binary-tree-inorder-traversal/) | Binary Tree Inorder Traversal | Easy | Tree, DFS, Binary Tree | O(n) | O(h) |
+| [100](java/100.same-tree/) | Same Tree | Easy | Tree, DFS, Binary Tree | O(min(m,n)) | O(min(m,n)) |
+| [101](java/101.symmetric-tree/) | Symmetric Tree | Easy | Tree, DFS, Binary Tree | O(n) | O(h) |
+
+### JavaScript Solutions
+
+| Problem # | Problem Name | Implementation | Algorithm |
+|-----------|--------------|----------------|-----------|
+| [1](javascript/two-sum/) | Two Sum | Brute Force + Optimized | Nested loops + Hash Map |
+
+## 🚀 Getting Started
 
 ## How to Run Solutions
 
-### Java Solutions
+### Running Java Solutions
 
 #### Compilation and Execution
 
@@ -56,10 +77,139 @@ java Solution
 - Use class name when running: Use `java Solution`, not `java Solution.java`
 - No import needed for same package: Classes in the same directory don't need explicit imports
 
-### JavaScript Solutions
+### Running JavaScript Solutions
 
 JavaScript solutions can be run directly with Node.js:
 
 ```bash
 node javascript/[problem-directory]/[filename].js
 ```
+
+## 📖 Detailed Problem Explanations
+
+### Problem 1: Two Sum
+**Difficulty:** Easy  
+**Topics:** Array, Hash Table  
+
+**Problem Statement:**
+Given an array of integers and a target value, find two numbers that add up to the target and return their indices.
+
+**Approaches Implemented:**
+1. **Brute Force** (`brute-force.js`): O(n²) time, O(1) space
+   - Uses nested loops to check all possible pairs
+   - Simple but inefficient for large inputs
+
+2. **Hash Map Optimization** (`advanced.js`): O(n) time, O(n) space
+   - Uses hash map to store complements for instant lookup
+   - Much more efficient, trades space for time
+
+**Key Learning:** Understanding when to trade space for time complexity improvements.
+
+---
+
+### Problem 20: Valid Parentheses
+**Difficulty:** Easy  
+**Topics:** String, Stack  
+
+**Problem Statement:**
+Determine if a string containing only parentheses characters is valid (properly balanced and nested).
+
+**Algorithm:**
+- Use a stack to track opening brackets
+- For each closing bracket, check if it matches the most recent opening bracket
+- Stack must be empty at the end for valid input
+
+**Key Learning:** Stack data structure is perfect for nested/balanced problems due to LIFO property.
+
+---
+
+### Problem 21: Merge Two Sorted Lists
+**Difficulty:** Easy  
+**Topics:** Linked List, Two Pointers  
+
+**Problem Statement:**
+Merge two sorted linked lists into one sorted list by splicing together nodes.
+
+**Algorithm:**
+- Use two pointers to traverse both lists simultaneously
+- Always choose the smaller current value to add to result
+- Append remaining nodes when one list is exhausted
+
+**Key Learning:** Two-pointer technique for merging sorted sequences.
+
+---
+
+### Problem 94: Binary Tree Inorder Traversal
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree  
+
+**Problem Statement:**
+Return the inorder traversal of a binary tree's node values.
+
+**Algorithm:**
+- Recursive approach: Left → Root → Right
+- For BSTs, inorder traversal returns values in sorted order
+- Can also be solved iteratively using a stack
+
+**Key Learning:** Understanding tree traversal patterns and their applications.
+
+---
+
+### Problem 100: Same Tree
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree  
+
+**Problem Statement:**
+Check if two binary trees are structurally identical with same node values.
+
+**Algorithm:**
+- Recursive comparison of corresponding nodes
+- Base cases handle null nodes and value mismatches
+- Both structure and values must match
+
+**Key Learning:** Recursive tree comparison and handling edge cases.
+
+---
+
+### Problem 101: Symmetric Tree
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree  
+
+**Problem Statement:**
+Check if a binary tree is symmetric around its center (mirror image).
+
+**Algorithm:**
+- Compare left and right subtrees as mirror images
+- For symmetry: left.left ↔ right.right, left.right ↔ right.left
+- Similar to Same Tree but with mirrored comparison
+
+**Key Learning:** Adapting tree comparison algorithms for different requirements.
+
+## 🏗️ Data Structures Used
+
+### TreeNode
+Used in binary tree problems (94, 100, 101). Represents a node in a binary tree with:
+- `val`: Integer value
+- `left`: Reference to left child
+- `right`: Reference to right child
+
+### ListNode  
+Used in linked list problems (21). Represents a node in a singly-linked list with:
+- `val`: Integer value
+- `next`: Reference to next node
+
+## 🎯 Key Algorithms & Techniques
+
+1. **Two Pointers**: Used in array and linked list problems
+2. **Hash Map/Hash Table**: For O(1) lookup optimizations
+3. **Stack**: Perfect for nested/balanced structure problems
+4. **Recursion**: Natural fit for tree problems
+5. **DFS (Depth-First Search)**: Tree traversal and comparison
+6. **Pattern Matching**: Recognizing when to apply specific techniques
+
+## 📝 Learning Notes
+
+- **Time vs Space Trade-offs**: Many problems can be optimized by using extra space
+- **Pattern Recognition**: Similar problem types often use similar approaches
+- **Edge Cases**: Always consider null inputs, empty structures, and boundary conditions
+- **Code Reusability**: Helper classes like TreeNode and ListNode are used across multiple problems
