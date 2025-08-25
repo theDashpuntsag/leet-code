@@ -6,20 +6,22 @@ A comprehensive collection of LeetCode problem solutions implemented in multiple
 
 ### Java Solutions
 
-| Problem # | Problem Name | Difficulty | Topics | Time Complexity | Space Complexity |
-|-----------|--------------|------------|--------|-----------------|------------------|
-| [1](javascript/two-sum/) | Two Sum | Easy | Array, Hash Table | O(n²) / O(n) | O(1) / O(n) |
-| [20](java/20.valid-parentheses/) | Valid Parentheses | Easy | String, Stack | O(n) | O(n) |
-| [21](java/21.merge-two-sorted-lists/) | Merge Two Sorted Lists | Easy | Linked List, Recursion | O(m+n) | O(1) |
-| [94](java/94.binary-tree-inorder-traversal/) | Binary Tree Inorder Traversal | Easy | Tree, DFS, Binary Tree | O(n) | O(h) |
-| [100](java/100.same-tree/) | Same Tree | Easy | Tree, DFS, Binary Tree | O(min(m,n)) | O(min(m,n)) |
-| [101](java/101.symmetric-tree/) | Symmetric Tree | Easy | Tree, DFS, Binary Tree | O(n) | O(h) |
+| Problem #                                        | Problem Name                    | Difficulty | Topics                 | Time Complexity | Space Complexity |
+| ------------------------------------------------ | ------------------------------- | ---------- | ---------------------- | --------------- | ---------------- |
+| [1](javascript/two-sum/)                         | Two Sum                         | Easy       | Array, Hash Table      | O(n²) / O(n)    | O(1) / O(n)      |
+| [20](java/20.valid-parentheses/)                 | Valid Parentheses               | Easy       | String, Stack          | O(n)            | O(n)             |
+| [21](java/21.merge-two-sorted-lists/)            | Merge Two Sorted Lists          | Easy       | Linked List, Recursion | O(m+n)          | O(1)             |
+| [94](java/94.binary-tree-inorder-traversal/)     | Binary Tree Inorder Traversal   | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [100](java/100.same-tree/)                       | Same Tree                       | Easy       | Tree, DFS, Binary Tree | O(min(m,n))     | O(min(m,n))      |
+| [101](java/101.symmetric-tree/)                  | Symmetric Tree                  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [144](java/144.binary-tree-preorder-traversal/)  | Binary Tree Preorder Traversal  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [145](java/145.binary-tree-postorder-traversal/) | Binary Tree Postorder Traversal | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 
 ### JavaScript Solutions
 
-| Problem # | Problem Name | Implementation | Algorithm |
-|-----------|--------------|----------------|-----------|
-| [1](javascript/two-sum/) | Two Sum | Brute Force + Optimized | Nested loops + Hash Map |
+| Problem #                | Problem Name | Implementation          | Algorithm               |
+| ------------------------ | ------------ | ----------------------- | ----------------------- |
+| [1](javascript/two-sum/) | Two Sum      | Brute Force + Optimized | Nested loops + Hash Map |
 
 ## 🚀 Getting Started
 
@@ -88,14 +90,17 @@ node javascript/[problem-directory]/[filename].js
 ## 📖 Detailed Problem Explanations
 
 ### Problem 1: Two Sum
+
 **Difficulty:** Easy  
-**Topics:** Array, Hash Table  
+**Topics:** Array, Hash Table
 
 **Problem Statement:**
 Given an array of integers and a target value, find two numbers that add up to the target and return their indices.
 
 **Approaches Implemented:**
+
 1. **Brute Force** (`brute-force.js`): O(n²) time, O(1) space
+
    - Uses nested loops to check all possible pairs
    - Simple but inefficient for large inputs
 
@@ -108,13 +113,15 @@ Given an array of integers and a target value, find two numbers that add up to t
 ---
 
 ### Problem 20: Valid Parentheses
+
 **Difficulty:** Easy  
-**Topics:** String, Stack  
+**Topics:** String, Stack
 
 **Problem Statement:**
 Determine if a string containing only parentheses characters is valid (properly balanced and nested).
 
 **Algorithm:**
+
 - Use a stack to track opening brackets
 - For each closing bracket, check if it matches the most recent opening bracket
 - Stack must be empty at the end for valid input
@@ -124,13 +131,15 @@ Determine if a string containing only parentheses characters is valid (properly 
 ---
 
 ### Problem 21: Merge Two Sorted Lists
+
 **Difficulty:** Easy  
-**Topics:** Linked List, Two Pointers  
+**Topics:** Linked List, Two Pointers
 
 **Problem Statement:**
 Merge two sorted linked lists into one sorted list by splicing together nodes.
 
 **Algorithm:**
+
 - Use two pointers to traverse both lists simultaneously
 - Always choose the smaller current value to add to result
 - Append remaining nodes when one list is exhausted
@@ -140,13 +149,15 @@ Merge two sorted linked lists into one sorted list by splicing together nodes.
 ---
 
 ### Problem 94: Binary Tree Inorder Traversal
+
 **Difficulty:** Easy  
-**Topics:** Tree, DFS, Binary Tree  
+**Topics:** Tree, DFS, Binary Tree
 
 **Problem Statement:**
 Return the inorder traversal of a binary tree's node values.
 
 **Algorithm:**
+
 - Recursive approach: Left → Root → Right
 - For BSTs, inorder traversal returns values in sorted order
 - Can also be solved iteratively using a stack
@@ -156,13 +167,15 @@ Return the inorder traversal of a binary tree's node values.
 ---
 
 ### Problem 100: Same Tree
+
 **Difficulty:** Easy  
-**Topics:** Tree, DFS, Binary Tree  
+**Topics:** Tree, DFS, Binary Tree
 
 **Problem Statement:**
 Check if two binary trees are structurally identical with same node values.
 
 **Algorithm:**
+
 - Recursive comparison of corresponding nodes
 - Base cases handle null nodes and value mismatches
 - Both structure and values must match
@@ -172,29 +185,73 @@ Check if two binary trees are structurally identical with same node values.
 ---
 
 ### Problem 101: Symmetric Tree
+
 **Difficulty:** Easy  
-**Topics:** Tree, DFS, Binary Tree  
+**Topics:** Tree, DFS, Binary Tree
 
 **Problem Statement:**
 Check if a binary tree is symmetric around its center (mirror image).
 
 **Algorithm:**
+
 - Compare left and right subtrees as mirror images
 - For symmetry: left.left ↔ right.right, left.right ↔ right.left
 - Similar to Same Tree but with mirrored comparison
 
 **Key Learning:** Adapting tree comparison algorithms for different requirements.
 
+---
+
+### Problem 144: Binary Tree Preorder Traversal
+
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree
+
+**Problem Statement:**
+Return the preorder traversal of a binary tree's node values.
+
+**Algorithm:**
+
+- Recursive approach: Root → Left → Right
+- Visit the root node first, then traverse left and right subtrees
+- Can also be solved iteratively using a stack
+
+**Key Learning:** Preorder traversal is useful for copying trees and evaluating prefix expressions.
+
+---
+
+### Problem 145: Binary Tree Postorder Traversal
+
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree
+
+**Problem Statement:**
+Return the postorder traversal of a binary tree's node values.
+
+**Algorithm:**
+
+- Recursive approach: Left → Right → Root
+- Traverse left and right subtrees first, then visit the root node
+- Can also be solved iteratively using a stack
+
+**Key Learning:** Postorder traversal is useful for deleting trees and evaluating postfix expressions.
+
+---
+
 ## 🏗️ Data Structures Used
 
 ### TreeNode
+
 Used in binary tree problems (94, 100, 101). Represents a node in a binary tree with:
+
 - `val`: Integer value
 - `left`: Reference to left child
 - `right`: Reference to right child
 
-### ListNode  
+### ListNode
+
 Used in linked list problems (21). Represents a node in a singly-linked list with:
+
 - `val`: Integer value
 - `next`: Reference to next node
 
