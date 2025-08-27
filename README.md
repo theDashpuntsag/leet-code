@@ -14,6 +14,7 @@ A comprehensive collection of LeetCode problem solutions implemented in multiple
 | [94](java/94.binary-tree-inorder-traversal/)     | Binary Tree Inorder Traversal   | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [100](java/100.same-tree/)                       | Same Tree                       | Easy       | Tree, DFS, Binary Tree | O(min(m,n))     | O(min(m,n))      |
 | [101](java/101.symmetric-tree/)                  | Symmetric Tree                  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [104](java/104.max-depth-of-binary-tree/)        | Maximum Depth of Binary Tree    | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [144](java/144.binary-tree-preorder-traversal/)  | Binary Tree Preorder Traversal  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [145](java/145.binary-tree-postorder-traversal/) | Binary Tree Postorder Traversal | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 
@@ -199,6 +200,24 @@ Check if a binary tree is symmetric around its center (mirror image).
 - Similar to Same Tree but with mirrored comparison
 
 **Key Learning:** Adapting tree comparison algorithms for different requirements.
+
+---
+
+### Problem 104: Maximum Depth of Binary Tree
+
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree
+
+**Problem Statement:**
+Given the root of a binary tree, return its maximum depth (the number of nodes along the longest path from the root down to the farthest leaf node).
+
+**Algorithm:**
+
+- Use recursion to compute the depth of left and right subtrees
+- The depth of the tree is 1 + max(left depth, right depth)
+- Base case: if node is null, depth is 0
+
+**Key Learning:** Recursive divide-and-conquer is a natural fit for tree depth problems.
 
 ---
 
