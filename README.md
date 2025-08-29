@@ -15,6 +15,7 @@ A comprehensive collection of LeetCode problem solutions implemented in multiple
 | [100](java/100.same-tree/)                       | Same Tree                       | Easy       | Tree, DFS, Binary Tree | O(min(m,n))     | O(min(m,n))      |
 | [101](java/101.symmetric-tree/)                  | Symmetric Tree                  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [104](java/104.max-depth-of-binary-tree/)        | Maximum Depth of Binary Tree    | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [110](java/110.balanced-binary-tree/)            | Balanced Binary Tree            | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [144](java/144.binary-tree-preorder-traversal/)  | Binary Tree Preorder Traversal  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [145](java/145.binary-tree-postorder-traversal/) | Binary Tree Postorder Traversal | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 
@@ -218,6 +219,24 @@ Given the root of a binary tree, return its maximum depth (the number of nodes a
 - Base case: if node is null, depth is 0
 
 **Key Learning:** Recursive divide-and-conquer is a natural fit for tree depth problems.
+
+---
+
+### Problem 110: Balanced Binary Tree
+
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree
+
+**Problem Statement:**
+Given a binary tree, determine if it is height-balanced. A height-balanced binary tree is one where the depth of the two subtrees of every node never differs by more than 1.
+
+**Algorithm:**
+
+- For each node, check if the absolute difference between left and right subtree heights is ≤ 1
+- Recursively check if both left and right subtrees are balanced
+- Use optimized approach that returns both height and balance status to avoid recalculating heights
+
+**Key Learning:** Combining multiple checks (height calculation + balance validation) in a single traversal for efficiency.
 
 ---
 
