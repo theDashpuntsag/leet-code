@@ -16,6 +16,7 @@ A comprehensive collection of LeetCode problem solutions implemented in multiple
 | [101](java/101.symmetric-tree/)                  | Symmetric Tree                  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [104](java/104.max-depth-of-binary-tree/)        | Maximum Depth of Binary Tree    | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [110](java/110.balanced-binary-tree/)            | Balanced Binary Tree            | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
+| [111](java/111.minimum-depth-of-binary-tree/)    | Minimum Depth of Binary Tree    | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [144](java/144.binary-tree-preorder-traversal/)  | Binary Tree Preorder Traversal  | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 | [145](java/145.binary-tree-postorder-traversal/) | Binary Tree Postorder Traversal | Easy       | Tree, DFS, Binary Tree | O(n)            | O(h)             |
 
@@ -237,6 +238,24 @@ Given a binary tree, determine if it is height-balanced. A height-balanced binar
 - Use optimized approach that returns both height and balance status to avoid recalculating heights
 
 **Key Learning:** Combining multiple checks (height calculation + balance validation) in a single traversal for efficiency.
+
+---
+
+### Problem 111: Minimum Depth of Binary Tree
+
+**Difficulty:** Easy  
+**Topics:** Tree, DFS, Binary Tree
+
+**Problem Statement:**
+Given a binary tree, find its minimum depth. The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+**Algorithm:**
+- Use recursion to find the minimum depth of left and right subtrees
+- Handle special cases: null nodes, leaf nodes, and nodes with only one child
+- Important: Unlike maximum depth, we cannot simply take min(left, right) + 1 because if one subtree is null, that path doesn't lead to a leaf node
+- Only consider paths that actually reach leaf nodes
+
+**Key Learning:** Understanding the difference between minimum and maximum depth calculations, and why null paths should be ignored in minimum depth.
 
 ---
 
